@@ -1,8 +1,15 @@
 <template>
     <div>
-        <functional-calendar class="demo-calendar" :is-date-picker="true" :with-time-picker="true">
-
-        </functional-calendar>
+        <button @click="openClose =  !openClose">
+            openclose
+        </button>
+        <section class="drop" v-show="openClose">
+            <functional-calendar class="demo-calendar" :is-date-picker="true" :with-time-picker="true"></functional-calendar>
+        </section>
+        
+        <!-- <section class="drop">
+            
+        </section>
         <FunctionalCalendar class="demo-calendar"
                             ref="Calendar"
                             :hiddenElements="['']"
@@ -50,7 +57,7 @@
             {{ props.day.day }}
             <span :class="{'green-point': props.day.day === 5, 'orange-point': props.day.day === 9, 'green-line': props.day.day === 11}"></span>
                 </span>
-        </FunctionalCalendar>
+        </FunctionalCalendar> -->
         <!--<functional-calendar class="demo-calendar"-->
         <!--:with-time-picker='true'-->
         <!--:is-date-picker='true'-->
@@ -96,6 +103,7 @@
         components: {FunctionalCalendar},
         data() {
             return {
+                openClose: false,
                 calendarData: {},
                 markedDates: [
                     "2019-12-6",
@@ -145,7 +153,7 @@
 
 <style>
     html, body {
-        background-color: #fec928;
+        background-color: #5f4d19;
         padding: 0;
         margin: 0;
     }

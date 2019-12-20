@@ -967,12 +967,21 @@
                 return name;
             },
             setCalendarStyles() {
+                //debugger
                 let day = this.$refs.day[0];
                 let container = this.$refs.mainContainer;
 
                 container.style.display = "";
                 let height = container.clientHeight + (day.clientHeight + (day.clientHeight / 2.5));
-                container.style.height = height + "px";
+                //container.style.height = height + "px";
+
+                // ##### DEIVIZ ###### 
+                if ( height) {
+                    container.style.height = height + "px";
+                } else {
+                    container.style.height = "auto";
+                }
+                // ##### DEIVIZ ###### 
 
                 if (this.fConfigs.isModal) {
                     container.style.display = "none"
