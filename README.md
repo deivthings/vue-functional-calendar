@@ -7,6 +7,10 @@
 ![gzip size](https://img.shields.io/badge/gzip%20size-5.73%20kB-44cc11.svg)
 ___
 
+## FORK INFO
+When calendar is into another html tag or component that uses v-show ( like modal or dropdown ), calendar cannot calculate container height due to v-show put display:none.
+This fork try to solve the v-show issue on calculate height of the container add height:auto when onmounted calendar get height 0.
+
 ## Demo
 
 Demo: <a href="https://y3jnxov469.codesandbox.io/" target="_blank">https://y3jnxov469.codesandbox.io/</a>
